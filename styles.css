@@ -5,21 +5,22 @@ body{
     width: 100vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     background-color:#FFF4EA;
 }
 h1{
     font-size: 3.5rem;
-    margin-bottom: 50px;
-  
-    margin-top:80px;
+    margin-bottom: 30px;
+    margin-top:0px;
     font-weight: bold;
 }
 h4{
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom:80px;
+    margin-bottom:60px;
+    margin-top:0;
 }
 .game-buttons{
     display: grid;
@@ -28,7 +29,7 @@ h4{
     gap: 10px;
     position: relative;
 }
-.game-buttons:before{
+.game-buttons::before{
     content:"";
     height:460px;
     width:460px;
@@ -87,6 +88,29 @@ h4{
     font-weight: bold;
     color: #e03f5f;
     position: absolute;
-    right:10%;
     top:30px;
+    right:6%;
+}
+
+@media(max-width: 576px){
+    .game-buttons::before{
+        height: 340px;
+        width: 340px;
+        top:-15px;
+        left: -15px;
+    }
+    .btn{
+        height: 150px;
+        width: 150px;
+    }   
+    .start-reset{
+        height:120px;
+        width:120px; 
+        top: calc(50% - 60px);
+        left:  calc(50% - 60px);
+    }    
+    .highestScore{
+        right:auto;
+        left: calc(50% - 67px);
+    }
 }
